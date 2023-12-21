@@ -704,18 +704,18 @@ endif
 
 ifdef TOOLCHAIN_COMMIT_DESC
 ifeq (,$(findstring $(SUPPORTED_TOOLCHAIN_COMMIT_DESC),$(TOOLCHAIN_COMMIT_DESC)))
-$(info WARNING: Toolchain version is not supported: $(TOOLCHAIN_COMMIT_DESC))
-$(info Expected to see version: $(SUPPORTED_TOOLCHAIN_COMMIT_DESC))
-$(info Please check ESP-IDF setup instructions and update the toolchain, or proceed at your own risk.)
+#$(info WARNING: Toolchain version is not supported: $(TOOLCHAIN_COMMIT_DESC))
+#$(info Expected to see version: $(SUPPORTED_TOOLCHAIN_COMMIT_DESC))
+#$(info Please check ESP-IDF setup instructions and update the toolchain, or proceed at your own risk.)
 else
 ifndef IS_BOOTLOADER_BUILD
 $(info Toolchain version: $(TOOLCHAIN_COMMIT_DESC))
 endif
 endif
 ifeq (,$(findstring $(TOOLCHAIN_GCC_VER), $(SUPPORTED_TOOLCHAIN_GCC_VERSIONS)))
-$(info WARNING: Compiler version is not supported: $(TOOLCHAIN_GCC_VER))
-$(info Expected to see version(s): $(SUPPORTED_TOOLCHAIN_GCC_VERSIONS))
-$(info Please check ESP-IDF setup instructions and update the toolchain, or proceed at your own risk.)
+#$(info WARNING: Compiler version is not supported: $(TOOLCHAIN_GCC_VER))
+#$(info Expected to see version(s): $(SUPPORTED_TOOLCHAIN_GCC_VERSIONS))
+#$(info Please check ESP-IDF setup instructions and update the toolchain, or proceed at your own risk.)
 else
 ifndef IS_BOOTLOADER_BUILD
 $(info Compiler version: $(TOOLCHAIN_GCC_VER))
